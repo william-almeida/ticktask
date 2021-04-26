@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <title>Tick Task</title>
+</head>
+<body>
+  <div class="container">
+    <div class="task">
+      <header>
+        <h1>Tick Task</h1>
+        <p>Descrição da aplicação...</p>
+      </header>
+      <ul>
+        <li>
+          <p>dar uma varrida e passa o pano</p>
+        </li>
+        <li>
+          <p>Subir esse projeto no github</p>
+        </li>
+        <li>
+          <p>terminar criar o front end</p>
+        </li>
+      </ul>
+    </div>
+    <div class="countdown">
+        <div id="clock">25:00</div>
+        <button
+          type="button"
+          onclick="App.start()"
+        > iniciar </button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module">
+    import { App } from './src/javascript/App.js'
+    App.start()
+  </script>
+</body>
+</html>
