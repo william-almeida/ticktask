@@ -7,7 +7,7 @@ const Notifier = {
   },
   notify (){
     if (Notification.permission === 'granted') {
-      new Audio('../audio/notification.mp3').play();
+      new Audio('/src/audio/notification.mp3').play();
       new Notification('Fim do ciclo!', {
         body: `Tenha um descanso de 5 min e volte ao foco.`
       })

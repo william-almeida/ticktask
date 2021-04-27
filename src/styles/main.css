@@ -53,7 +53,7 @@ a {
 
 /* Titles */
 h1 {
-  font: 700 2.5rem 'Nunito' ;
+  font: 700 3.5rem 'Nunito' ;
   color: var(--title);
 }
 
@@ -68,12 +68,16 @@ h1 {
   
   margin: auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 2fr;
   background-color: var(--white);
 }
 
 .container .task{
-  background-color: #e59eec;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .container .countdown{
