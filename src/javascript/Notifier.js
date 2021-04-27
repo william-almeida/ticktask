@@ -1,6 +1,6 @@
 const Notifier = {
   permission: 'default',
-  async init (){
+  async request (){
     if (Notifier.permission === 'denied' ) {
       Notifier.permission = await Notification.requestPermission()
     }

@@ -4,8 +4,8 @@ import { View } from "./View.js"
 
 const App = {
   async start() {
-    await Notifier.init()
-    View.init()
+    await Notifier.request()
+    Timer.init()
   }
 }
 

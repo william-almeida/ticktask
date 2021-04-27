@@ -1,8 +1,8 @@
 const View = {
   target: document.querySelector('#clock'),
-  init() {
+  render({minutes, seconds}) {
     View.target.innerHTML = `
-    <span>00:00</span>
+    <span>${minutes}:${seconds}</span>
     `
   }
 }
