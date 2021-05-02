@@ -1,7 +1,6 @@
-import { Dom } from "./Dom.js"
-import { Notifier } from "./Notifier.js"
-import { Utils } from "./Utils.js"
-import { View } from "./View.js"
+import { Dom } from "./DomController.js"
+import { Notifier } from "./NotifierController.js"
+import { Utils } from "../utils/timerUtils.js"
 
 const Timer = {
   time: 25 * 60,
@@ -18,7 +17,7 @@ const Timer = {
   countdown(){
     Timer.currentTime -= 1
 
-    View.render({
+    Dom.render({
       minutes: Utils.timeToMinutes(Timer.currentTime),
       seconds: Utils.timeToSeconds(Timer.currentTime)
     })
