@@ -4,7 +4,7 @@ import { Utils } from "./Utils.js"
 import { View } from "./View.js"
 
 const Timer = {
-  time: 10,
+  time: 25 * 60,
   currentTime: 0,
   interval: null,
   isActive: false,
