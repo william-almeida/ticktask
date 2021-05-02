@@ -3,7 +3,7 @@ import { Utils } from "./Utils.js"
 import { View } from "./View.js"
 
 const Timer = {
-  time: 25 * 60,
+  time: 5,
   currentTime: 0,
   interval: null,
 
@@ -14,6 +14,7 @@ const Timer = {
 
   countdown(){
     Timer.currentTime -= 1
+
     View.render({
       minutes: Utils.timeToMinutes(Timer.currentTime),
       seconds: Utils.timeToSeconds(Timer.currentTime)
@@ -22,8 +23,8 @@ const Timer = {
     if(Timer.currentTime === 0){
       Notifier.notify()
       clearInterval(Timer.interval)
+
     }
-    console.log(Timer.currentTime)
   }
 }
 

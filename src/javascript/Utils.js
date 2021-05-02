@@ -1,11 +1,16 @@
 const Utils = {
   timeToMinutes(time) {
-    const minutes = time / 60
-    return Math.floor(minutes)
+    const minutes = Math.floor(time / 60)
+    return Utils.formatTime(minutes)
   },
+
   timeToSeconds(time) {
     const seconds = time % 60
-    return Math.floor(seconds)
+    return Utils.formatTime(seconds)
+  },
+
+  formatTime(time) {
+    return String(time).padStart(2, '0')
   }
 }
 
