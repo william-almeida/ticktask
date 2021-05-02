@@ -1,9 +1,10 @@
+import { Dom } from "./Dom.js"
 import { Notifier } from "./Notifier.js"
 import { Utils } from "./Utils.js"
 import { View } from "./View.js"
 
 const Timer = {
-  time: 5,
+  time: 10,
   currentTime: 0,
   interval: null,
   isActive: false,
@@ -24,7 +25,8 @@ const Timer = {
 
     if(Timer.currentTime === 0){
       Notifier.notify()
-      Timer.isActive = true
+      Timer.isActive = false
+      Dom.enableButton()
       clearInterval(Timer.interval)
 
     }

@@ -7,9 +7,9 @@
   --white: #ffffff;
   --background: #F2F3F5;
   --gray-line: #DCDDE0;
-  --text: #55556d;
   --text-highlight: #B3B9FF;
   --title: #2E384D;
+  --disabled: #808080;
   --red: #E83F5B;
   --green: #4CD62B;
   --blue: #5965E0;
@@ -91,7 +91,7 @@ h1 {
 }
 
 .container .countdown #clock {
-  font: 600 8rem 'Rajdhani';
+  font: 400 8rem 'Share tech mono';
 }
 
 .container .countdown button{
@@ -101,4 +101,8 @@ h1 {
   background-color: var(--green);
   color: var(--white);
   border-radius: 5px;
+}
+
+.container .countdown button.disabled{
+  background-color: var(--disabled);
 }
