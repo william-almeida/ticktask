@@ -6,8 +6,10 @@ const Timer = {
   time: 5,
   currentTime: 0,
   interval: null,
+  isActive: false,
 
   init(){
+    Timer.isActive = true
     Timer.currentTime = Timer.time
     Timer.interval = setInterval(Timer.countdown, 1000)
   },
@@ -22,6 +24,7 @@ const Timer = {
 
     if(Timer.currentTime === 0){
       Notifier.notify()
+      Timer.isActive = true
       clearInterval(Timer.interval)
 
     }

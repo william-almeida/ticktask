@@ -1,11 +1,11 @@
 import { Notifier } from "./Notifier.js"
 import { Timer } from "./Timer.js"
-import { View } from "./View.js"
+import { Button } from "./Button.js"
 
 const App = {
   async start() {
     await Notifier.request()
-    Timer.init()
+    Button.init()
   }
 }
 
