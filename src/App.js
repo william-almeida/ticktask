@@ -1,8 +1,8 @@
-import { Notifier } from "./controllers/Notifier.js"
+import { Notifier } from "./controllers/NotifierController.js"
 import { Dom } from "./controllers/DomController.js"
 
 const App = {
-  async start() {
+  async init() {
     await Notifier.request()
     Dom.init()
   }
