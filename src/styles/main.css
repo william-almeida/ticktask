@@ -124,7 +124,51 @@ h1 {
   background-color: var(--disabled);
 }
 
-/* ##################################### */
+/* ADD NEW TASKS ####################### */
+#new-tasks{
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+/* input ============= */
+input#new-task{
+  color: #ffffff;
+  padding: 0 1rem ;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--shape);
+}
+
+input#new-task:focus-visible {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: none;
+}
+/* button ============ */
+button#add-task {
+  background-color: var(--green);
+  color: var(--white);
+  font-family: 'Nunito';
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  height: 40px;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  transition: 100ms;
+  
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+
+}
+
+
+button#add-task:hover {
+  opacity: 0.7;
+}
+
 /* TASKS ############################### */
 .task-container{
   width: 100%;
@@ -146,3 +190,4 @@ h1 {
 .item:hover {
   background-color: #00000000;
 }
+/* ##################################### */

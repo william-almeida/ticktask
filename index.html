@@ -16,21 +16,34 @@
 
 <body>
   <div class="container">
-
-    <header>
-      <h1>Tick Task</h1>
-      <img src="src/assets/logo.svg" alt="Logo: Tick Task">
-    </header>
+    <div class="top">
+      <header>
+        <h1>Tick Task</h1>
+        <img src="src/assets/logo.svg" alt="Logo: Tick Task">  
+      </header>
+      <!-- um player de audio aqui futuramente -->
+    </div>
+    
 
     <div class="content">
       <div class="task-container">
+        
+        <div id="new-tasks">
+          <input type="text" id="new-task">
+          <button id="add-task">add</button>
+        </div>
+
+        <div class="item" >
+          <input type="checkbox" id="check-task" name="check-task">
+          <label for="check-task">Relações label - input - id</label>
+        </div>
 
       </div>
       <div class="countdown">
         <span id="clock">25:00</span>
         <button type="button" id="countdown-button"> iniciar </button>
       </div>
-
+      
     </div> 
     
   </div><!-- container -->
