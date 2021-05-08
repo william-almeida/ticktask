@@ -1,14 +1,20 @@
 import { TasksDB } from "../model/Tasks.js";
 
-const Task = {
+const Render = {
   init() {
-    const taskList = TasksDB.database
-
-    for (let i = 0; i < taskList.length; i++) {
-      console.log(taskList[i])
-      // console.log('asdaj')
+    const tasks = TasksDB.database
+    for (let i = 0; i < tasks.length; i++) {
+      Render.show(tasks[i])
     }
+  },
+  show(task) {
+    const container = document.querySelector('.task-container')
+    container.innerHTML += `
+      <div class="item">
+        <input type="checkbox">
+        <p>${task.description}</p>
+      </div>`
   }
 }
 
-export { Task }
+export { Render }

@@ -9,6 +9,21 @@ const TasksDB = {
       id: 1,
       description:"Manipular os dados do array []",
       status: 'in-progress'
+    },
+    {
+      id: 1,
+      description:"recirar os temas []",
+      status: 'in-progress'
+    },
+    {
+      id: 1,
+      description:"Maratonar animes",
+      status: 'in-progress'
+    },
+    {
+      id: 1,
+      description:"Manipular os dados do array []",
+      status: 'in-progress'
     }
   ]
 }
