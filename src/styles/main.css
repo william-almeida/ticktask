@@ -5,23 +5,19 @@
 }
 :root {
   --white: #ffffff;
-  --background: #f1f1f1;
-  --gray-line: #DCDDE0;
-  --text-highlight: #B3B9FF;
-  --title: #2E384D;
+  --background: #121214;
+  --shape: #202024;
+  --title: #2AA9E0;
   --disabled: #00000050;
   --red: #E83F5B;
   --green: #4CD62B;
-  --blue: #5965E0;
-  --blue-dark: #4953B8;
-  --blue-twitter: #2AA9E0;
   --invert-white: brightness(0) invert(1);
 }
 
 /* Responsividade */
 
 html {
-    /* font-size 14px */
+    /* font-size 15px */
     font-size: 93.75%;
     
   }
@@ -33,9 +29,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--background);
-  display: block;
-  align-items: center;
-  justify-content: center ;
+  color: var(--white);
 }
 
 body, button, input, textarea {
@@ -60,22 +54,25 @@ h1 {
   color: var(--title);
 }
 
+/* ##################################### */
+/* CONTAINER ########################### */
 
 .container {
-  width: 90%;
-  max-width: 1400px;
   height: 100%;
-  display: flex;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 4rem 0; 
+  display: flex;
+  flex-direction: column;
 }
 
 .container header{
+  background-color: var(--shape);
   display: flex;
   align-items: center;
   justify-items: center;
-  padding-bottom: 2rem;
-  border-radius: 2.5rem;
+  padding: 2rem 0;
+
 }
 .container header img{
   height: 4rem;
@@ -93,7 +90,7 @@ h1 {
 }
 
 .task .item {
-  background-color: #ffffff56;
+  background-color: var(--shape);
   padding: .5rem 0.4rem;
   margin-right: 5rem;
   margin-bottom: 1rem;
@@ -103,12 +100,12 @@ h1 {
 }
 
 .task .item:hover {
-  background-color: #ffffff;
+  background-color: #00000000;
 }
 
 .container .countdown{
-  color: var(--title);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--shape);
   display: flex;
   flex-direction: column;
   align-items: center;
