@@ -19,7 +19,7 @@
 
 **Mayk Brito**
 
-* Instagram: [@wxllvm](https://instagram.com/william-almeida)
+* Instagram: [@william.dvlpr](https://instagram.com/william-almeida)
 * Github: [@william-almeida](https://github.com/william-almeida)
 
 ## 🤝 Contributing
