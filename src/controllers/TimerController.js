@@ -3,8 +3,8 @@ import { Notifier } from "./NotifierController.js"
 import { Utils } from "../utils/timerUtils.js"
 
 const Timer = {
-  // time: 25 * 60,
-  time: 10,
+  time: 25 * 60,
+  // time: 10, // for tests
   currentTime: 0,
   interval: null,
   isActive: false,

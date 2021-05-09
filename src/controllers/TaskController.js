@@ -1,10 +1,10 @@
-import { TasksDB } from "../model/Tasks.js";
+import { DB } from "../model/Tasks.js";
 
-const Render = {
+const Task = {
   init() {
-    const tasks = TasksDB.database
+    const tasks = DB.database
     for (let i = 0; i < tasks.length; i++) {
-      Render.show(tasks[i])
+      Task.show(tasks[i])
     }
   },
   show(task) {
@@ -14,7 +14,10 @@ const Render = {
         <input type="checkbox">
         <p>${task.description}</p>
       </div>`
+  },
+  createTask() {
+    
   }
 }
 
-export { Render }
+export { Task }
