@@ -8,7 +8,7 @@ const App = {
     await Notifier.request()
     Dom.init()
     Task.init()
-    TaskUtils.idGenerator()
+    TaskUtils.handleButton()
   }
 }
 

@@ -40,6 +40,11 @@ button {
   cursor: pointer;
 }
 
+:disabled {
+  filter: grayscale(0);
+  background-color: #E83F5B;
+}
+
 /* Links */
 
 a {
@@ -127,7 +132,6 @@ button#add-task {
   justify-content: center;
 
 }
-
 
 button#add-task:hover {
   opacity: 0.7;
