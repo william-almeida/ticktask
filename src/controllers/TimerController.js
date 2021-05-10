@@ -12,7 +12,7 @@ const Timer = {
   init(){
     Timer.isActive = true
     Timer.currentTime = Timer.time
-    Timer.interval = setInterval(Timer.countdown, 1000)
+    Timer.interval = setInterval(Timer.countdown, 10)
   },
 
   countdown(){
@@ -26,6 +26,12 @@ const Timer = {
     if(Timer.currentTime === 0){
       Notifier.notify()
       Timer.isActive = false
+      Dom.render({
+        minutes: '25',
+        seconds: '00'
+        // minutes: Utils.timeToMinutes(Timer.currentTime),
+        // seconds: Utils.timeToSeconds(Timer.currentTime)
+      })
       Dom.enableButton()
       clearInterval(Timer.interval)
 

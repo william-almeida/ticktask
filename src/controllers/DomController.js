@@ -24,8 +24,8 @@ const Dom = {
   },
 
   render({minutes, seconds}) {
-      const target = document.querySelector('#clock')
-      target.innerHTML = `<span>${minutes}:${seconds}</span>`
+      const clock = document.querySelector('#clock')
+      clock.innerHTML = `<span>${minutes}:${seconds}</span>`
   }
 }
 

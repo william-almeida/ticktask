@@ -21,24 +21,35 @@
         <h1>Tick Task</h1>
         <img src="src/assets/logo.svg" alt="Logo: Tick Task">  
       </header>
-      <!-- um player de audio aqui futuramente -->
+      <!-- 
+        * task realizadas no dia,
+        * quantas faltam,
+        * e o tempo correspodente
+        * ref: jobs calc
+      -->
     </div>
     
 
     <div class="content">
       <div class="task-container">
         
+        <!-- input container ################# -->
         <div id="input-container">
           <input type="text" id="new-task" placeholder="add new task" value="">
-          <button id="add-task" class="disabled" disabled><img src="./src/assets/add.svg" alt="Add new task"></button>
+          <button id="add-task" class="disabled" disabled>
+            <img src="./src/assets/add.svg" alt="Add new task">
+          </button>
         </div>
 
+        <!-- tasks container ################# -->
         <div class="item" >
           <input type="checkbox" id="check-task" name="check-task">
           <label for="check-task">Relações label - input - id</label>
         </div>
 
       </div>
+
+      <!-- Countdown container ############### -->
       <div class="countdown">
         <span id="clock">25:00</span>
         <button type="button" id="countdown-button"> iniciar </button>
