@@ -11,7 +11,7 @@
   --disabled: #00000050;
   --red: #E83F5B;
   --blue: #2bbcd6;
-  --invert-white: brightness(0) invert(1);
+  --invert-to-white: brightness(0) invert(1);
 }
 
 /* Responsividade */
@@ -125,7 +125,8 @@ input#new-task:focus-visible {
   height: 40px;
   border: none;
   border-radius: 0 1rem 1rem 0;
-  transition: 100ms;
+  /* transition: 100ms; */
+  transition: ba;
   
   display: flex;
   align-items: center ;
@@ -138,13 +139,14 @@ input#new-task:focus-visible {
 }
 #input-container button.disabled {
   background-color: var(--shape);
+  transition: 200ms;
 
 }
 
 
 button#add-task img {
   height: 60%;
-  filter: var(--invert-white);
+  filter: var(--invert-to-white);
 }
 
 /* TASKS ############################### */
@@ -163,6 +165,7 @@ button#add-task img {
   border-radius: 8px;
   display: flex;
   align-items: center;
+  transition: 200ms;
 }
 
 .item:hover {
