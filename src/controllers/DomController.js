@@ -29,11 +29,4 @@ const Dom = {
   }
 }
 
-
 export { Dom }
-
-/*
-statar o cowntdown ao clicar
-se o status do botão for inativo
-
-*/

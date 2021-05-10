@@ -94,7 +94,7 @@ h1 {
 }
 
 /* ADD NEW TASKS ####################### */
-#new-tasks{
+#input-container{
   display: flex;
   margin-bottom: 2rem;
 }
@@ -116,7 +116,7 @@ input#new-task:focus-visible {
   outline: none;
 }
 /* button ============ */
-button#add-task {
+#input-container button {
   background-color: var(--blue);
   color: var(--white);
   font-family: 'Nunito';
@@ -133,9 +133,14 @@ button#add-task {
 
 }
 
-button#add-task:hover {
+#input-container button:hover {
   opacity: 0.7;
 }
+#input-container button.disabled {
+  background-color: var(--shape);
+
+}
+
 
 button#add-task img {
   height: 60%;

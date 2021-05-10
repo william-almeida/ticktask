@@ -10,14 +10,17 @@ const TaskUtils = {
   handleButton() {
     const newTask = document.querySelector('#new-task')
     const button = document.querySelector('#add-task')
+    button.addEventListener('click', ()=> { alert('okok')} )
     newTask.addEventListener('input', ()=> {
       const description = newTask.value
-      if (description !== null && description !== '') {
+      if (description !== '') {
         //habilita o botão
-        button.disabled = false;
+        button.disabled = false
+        button.classList.remove('disabled')
       } else {
         //desabilita o botão se o conteúdo do input ficar em branco
-        bu.disabled = true;
+        button.disabled = true
+        button.classList.add('disabled')
       }
     })
     
