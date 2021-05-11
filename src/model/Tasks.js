@@ -24,7 +24,7 @@ const DB = {
       status: 'in-progress'
     }
   ],
-  addNewTask(id, description) {
+  addNewTask({id, description}) {
     DB.database.push({
       id: id,
       description: description
