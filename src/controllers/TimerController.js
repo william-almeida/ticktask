@@ -3,8 +3,8 @@ import { Notifier } from "./NotifierController.js"
 import { Utils } from "../utils/timerUtils.js"
 
 const Timer = {
-  time: 25 * 60,
-  // time: 10, // for tests
+  // time: 25 * 60,
+  time: 10, // for tests
   currentTime: 0,
   interval: null,
   isActive: false,
@@ -12,10 +12,12 @@ const Timer = {
   init(){
     Timer.isActive = true
     Timer.currentTime = Timer.time
-    Timer.interval = setInterval(Timer.countdown, 10)
+    Timer.interval = setInterval(Timer.countdown, 1000)
   },
 
   countdown(){
+    const launcherButton = document.querySelector('#countdown-button')
+    
     Timer.currentTime -= 1
 
     Dom.render({
@@ -26,15 +28,14 @@ const Timer = {
     if(Timer.currentTime === 0){
       Notifier.notify()
       Timer.isActive = false
+      clearInterval(Timer.interval)
+      
+      Dom.enableButton(launcherButton)
+
       Dom.render({
         minutes: '25',
         seconds: '00'
-        // minutes: Utils.timeToMinutes(Timer.currentTime),
-        // seconds: Utils.timeToSeconds(Timer.currentTime)
       })
-      Dom.enableButton()
-      clearInterval(Timer.interval)
-
     }
   }
 }
