@@ -1,16 +1,17 @@
 import { Timer } from "./TimerController.js"
 
 const Dom = {
-  target: document.querySelector('#countdown-button'),
   init() {
-    Dom.target.addEventListener('click',() => { Dom.startCowntdown()})
+    Dom.startCowntdown()
   },
-
   startCowntdown() {
-    if (!Timer.isActive) {
-      Timer.init()
-      Dom.disableButton()
-    }
+    const button = document.querySelector('#countdown-button')
+    button.addEventListener('click',() => {
+      if (!Timer.isActive) {
+        Timer.init()
+        Dom.disableButton()
+      }
+    })
   },
 
   disableButton() {

@@ -7,10 +7,13 @@ const Task = {
     for (let i = 0; i < tasks.length; i++) {
       Task.show(tasks[i])
     }
-    Task.handleButton()
-    Task.create()
 
   },
+  start() {
+    Task.handleButton()
+    Task.create()
+  },
+
   show(task) {
     const container = document.querySelector('.task-container')
     container.innerHTML += `
@@ -46,6 +49,7 @@ const Task = {
         id: TaskUtils.idGenerator(),
         description: description
       })
+      Task.init()
     } )
   }
 }
