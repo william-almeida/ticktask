@@ -22,9 +22,10 @@ const Task = {
   show(task) {
     const container = document.querySelector('.task-list-container')
     container.innerHTML += `
-      <div class="item">
-        <input type="checkbox">
-        <p>${task.description}</p>
+      <div>
+        <label class="item">
+          <input type="checkbox">${task.description}
+        </label>
       </div>`
   },
 
