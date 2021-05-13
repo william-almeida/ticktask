@@ -33,8 +33,8 @@ const Timer = {
       Dom.enableButton(launcherButton)
 
       Dom.render({
-        minutes: '25',
-        seconds: '00'
+        minutes: '00',
+        seconds: '10'
       })
     }
   }

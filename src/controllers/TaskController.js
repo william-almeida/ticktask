@@ -3,30 +3,36 @@ import { TaskUtils } from "../utils/taskUtils.js";
 
 const Task = {
   init() {
+    Task.update()
+    Task.handleButton()
+    Task.create()
+  },
+
+  update() {
     const tasks = DB.database
+    const container = document.querySelector('.task-list-container')
+    container.innerHTML = ' '
     for (let i = 0; i < tasks.length; i++) {
       Task.show(tasks[i])
     }
 
   },
-  start() {
-    Task.handleButton()
-    Task.create()
-  },
 
   show(task) {
-    const container = document.querySelector('.task-container')
+    const container = document.querySelector('.task-list-container')
     container.innerHTML += `
       <div class="item">
         <input type="checkbox">
         <p>${task.description}</p>
       </div>`
   },
-  
+
   handleButton() {
     const newTask = document.querySelector('#new-task')
     const button = document.querySelector('#add-task')
-    newTask.addEventListener('input', ()=> {
+
+    // When entering a new task, obtain the description and enable the button
+    newTask.addEventListener('input', () => {
       const description = newTask.value
       if (description !== '') {
         //habilita o botão
@@ -38,19 +44,19 @@ const Task = {
         button.classList.add('disabled')
       }
     })
-    
+
   },
 
   create() {
     const button = document.querySelector('#add-task')
-    button.addEventListener('click', ()=> {
+    button.addEventListener('click', () => {
       const description = document.querySelector('#new-task').value
       DB.addNewTask({
         id: TaskUtils.idGenerator(),
         description: description
       })
-      Task.init()
-    } )
+      Task.update()
+    })
   }
 }
 
