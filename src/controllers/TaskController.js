@@ -36,12 +36,9 @@ const Task = {
     newTask.addEventListener('input', () => {
       const description = newTask.value
       if (description !== '') {
-        //habilita o botão
-        button.disabled = false
-        button.classList.remove('disabled')
+        Dom.enableButton(button)
       } else {
-        //desabilita o botão se o conteúdo do input ficar em branco
-        Dom.enableButton
+        Dom.disableButton(button)
       }
     })
 
