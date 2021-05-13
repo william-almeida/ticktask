@@ -1,5 +1,6 @@
 import { DB } from "../model/Tasks.js";
-import { TaskUtils } from "../utils/taskUtils.js";
+import { Utils } from "../utils/Utils.js";
+import { Dom } from "./DomController.js";
 
 const Task = {
   init() {
@@ -40,8 +41,7 @@ const Task = {
         button.classList.remove('disabled')
       } else {
         //desabilita o botão se o conteúdo do input ficar em branco
-        button.disabled = true
-        button.classList.add('disabled')
+        Dom.enableButton
       }
     })
 
@@ -52,7 +52,7 @@ const Task = {
     button.addEventListener('click', () => {
       const description = document.querySelector('#new-task').value
       DB.addNewTask({
-        id: TaskUtils.idGenerator(),
+        id: Utils.idGenerator(),
         description: description
       })
       Task.update()

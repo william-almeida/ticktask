@@ -1,6 +1,6 @@
 import { Dom } from "./DomController.js"
 import { Notifier } from "./NotifierController.js"
-import { Utils } from "../utils/timerUtils.js"
+import { Utils } from "../utils/Utils.js"
 
 const Timer = {
   // time: 25 * 60,
