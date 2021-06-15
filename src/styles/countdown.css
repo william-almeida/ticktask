@@ -1,11 +1,8 @@
 .container .countdown{
-  background-color: var(--shape);
-
-  min-height: 400px;
-  margin: 0 2rem;
+  min-height: 500px;
+  margin: auto;
   padding: 0 3rem;
   border-radius: 2rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
