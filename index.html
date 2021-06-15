@@ -19,46 +19,14 @@
 
 <body>
   <div class="container">
-    <div class="top">
-      <header>
-        <h1>Tick Task</h1>
-        <img src="src/assets/logo.svg" alt="Logo: Tick Task">  
-      </header>
-      <!-- 
-        * task realizadas no dia,
-        * quantas faltam,
-        * e o tempo correspodente
-        * ref: jobs calc
-      -->
-    </div>
-    
-
-    <div class="content">
-      <div class="task-container">
-        
-        <!-- input container ################# -->
-        <div id="input-container">
-          <input type="text" id="new-task" placeholder="add new task" value="">
-          <button id="add-task" class="disabled" disabled>
-            <img src="./src/assets/add.svg" alt="Add new task">
-          </button>
-        </div>
-        
-        <div class="task-list-container">
-
-        </div>
-        <!-- tasks container ################# -->
-        
-
-      </div>
 
       <!-- Countdown container ############### -->
       <div class="countdown">
         <span id="clock">25:00</span>
-        <button type="button" id="countdown-button"> iniciar </button>
+        <button type="button" id="countdown-button"> start </button>
       </div>
       
-    </div> 
+     
     
   </div><!-- container -->
 
@@ -67,6 +35,10 @@
     import { App } from './src/App.js';
     App.init();
   </script>
+
+  <!--  Development Enviroment -->
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 
 </html>
