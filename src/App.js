@@ -6,6 +6,7 @@ const App = {
   async init() {
     await Notifier.request()
     Dom.init()
+    console.log('All right')
     Task.init()
   }
 }
