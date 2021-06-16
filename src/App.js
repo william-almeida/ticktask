@@ -7,7 +7,6 @@ const App = {
     await Notifier.request()
     Dom.init()
     console.log('All right')
-    Timer.init()
   }
 }
 
