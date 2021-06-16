@@ -3,96 +3,56 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --white: #ffffff;
-  --background: #121214;
-  --shape: #202024;
-  --title: #2AA9E0;
+  --text: #f8f8f2;
+  --background: #282a36;
   --disabled: #00000050;
-  --red: #E83F5B;
+  --green: #50fa7b;
+  --red: #ff5555;
+  --purple: #bd93f9;
   --blue: #2bbcd6;
   --invert-to-white: brightness(0) invert(1);
 }
 
-/* Responsividade */
-
-html {
-    /* font-size 15px */
-    font-size: 93.75%;
-    
-  }
-
-
-/* Settings */
-
-body {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--background);
-  color: var(--white);
-}
-
-body, button, input, textarea {
-  font: 400 1rem 'Inter', sans-serif;
-}
-
-button {
-  cursor: pointer;
-}
-
-:disabled {
-  filter: grayscale(0);
-  background-color: #E83F5B;
-}
-
-/* Links */
-
-a {
-  text-decoration: none;
-  /* herda a cor do container */
-  color: inherit;
-}
-
-/* Titles */
-h1 {
-  font: 700 3.5rem 'Nunito' ;
-  /* color: var(--title); */
-  color: var(--blue);
-}
-
-/* CONTAINER ########################### */
-
-.container {
+body, html {
   height: 100%;
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  color: var(--text);
+}
+
+.container .countdown{
+  background-color: var(--background);
+  height: 500px;
+  width: 500px;
   margin: auto;
   display: flex;
   flex-direction: column;
-}
-
-/* HEADER ############################## */
-
-.container header {
-  display: flex;
   align-items: center;
-  justify-items: center;
-  padding: 2rem 0;
-
-}
-.container header img {
-  height: 4rem;
-  padding-left: 10px;
+  justify-content: center;
+  
 }
 
-/* CONTENT ############################# */
-
-.container .content {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.container .countdown #clock {
+  font: 600 6rem 'Nunito';
 }
 
-.task-container{
-  width: 100%;
+.container .countdown button{
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  transition: 100ms;
+}
+
+.container .countdown button:hover {
+  opacity: 0.7;
+}
+
+.container .countdown button.disabled{
+  background-color: var(--disabled);
 }
