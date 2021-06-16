@@ -8,11 +8,10 @@
   --white: #ffffff;
   --text: #f8f8f2;
   --background: #282a36;
-  --disabled: #00000050;
+  --disabled: #44475a;
   --green: #50fa7b;
   --red: #ff5555;
   --purple: #bd93f9;
-  --blue: #2bbcd6;
   --invert-to-white: brightness(0) invert(1);
 }
 
@@ -41,6 +40,7 @@ body, html {
 .container .countdown button{
   font-size: 1rem;
   font-weight: 600;
+  width: 200px;
   padding: 0.5rem 1rem;
   border: none;
   background-color: var(--purple);
